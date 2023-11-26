@@ -57,43 +57,43 @@ function CreateContent() {
       }
 
       if (!res.data.error) {
-        toast.success("Task created successfully.");
+        toast.success("タスクが追加できたよ");
         allTasks();
         closeModal();
       }
     } catch (error) {
-      toast.error("Something went wrong.");
+      toast.error("なにかが上手くいきませんでした。再度試してください！");
       console.log(error);
     }
   };
 
   return (
     <CreateContentStyled onSubmit={handleSubmit} theme={theme}>
-      <h1>Create a Task</h1>
+      <h1>タスクを追加</h1>
       <div className="input-control">
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title">タイトル</label>
         <input
           type="text"
           id="title"
           value={title}
           name="title"
           onChange={handleChange("title")}
-          placeholder="e.g, Watch a video from Fireship."
+          placeholder="Next.jsを学ぶ🐹"
         />
       </div>
       <div className="input-control">
-        <label htmlFor="description">Description</label>
+        <label htmlFor="description">説明</label>
         <textarea
           value={description}
           onChange={handleChange("description")}
           name="description"
           id="description"
           rows={4}
-          placeholder="e.g, Watch a video about Next.js Auth"
+          placeholder="Next.js バージョン14についてとことん勉強🐨"
         ></textarea>
       </div>
       <div className="input-control">
-        <label htmlFor="date">Date</label>
+        <label htmlFor="date">日付</label>
         <input
           value={date}
           onChange={handleChange("date")}
@@ -103,7 +103,7 @@ function CreateContent() {
         />
       </div>
       <div className="input-control toggler">
-        <label htmlFor="completed">Toggle Completed</label>
+        <label htmlFor="completed">完了タスクにチェック</label>
         <input
           value={completed.toString()}
           onChange={handleChange("completed")}
@@ -113,7 +113,7 @@ function CreateContent() {
         />
       </div>
       <div className="input-control toggler">
-        <label htmlFor="important">Toggle Important</label>
+        <label htmlFor="important">重要なタスクにチェック</label>
         <input
           value={important.toString()}
           onChange={handleChange("important")}
@@ -126,7 +126,7 @@ function CreateContent() {
       <div className="submit-btn flex justify-end">
         <Button
           type="submit"
-          name="Create Task"
+          name="追加"
           icon={add}
           padding={"0.8rem 2rem"}
           borderRad={"0.8rem"}

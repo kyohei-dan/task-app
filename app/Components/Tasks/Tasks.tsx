@@ -37,7 +37,7 @@ function Tasks({ title, tasks }: Props) {
         ))}
         <button className="create-task" onClick={openModal}>
           {add}
-          Add New Task
+          タスクを追加する
         </button>
       </div>
     </TaskStyled>

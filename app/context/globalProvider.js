@@ -38,9 +38,7 @@ export const GlobalProvider = ({ children }) => {
       const res = await axios.get("/api/tasks");
 
       const sorted = res.data.sort((a, b) => {
-        return (
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-        );
+        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
       });
 
       setTasks(sorted);
@@ -54,7 +52,7 @@ export const GlobalProvider = ({ children }) => {
   const deleteTask = async (id) => {
     try {
       const res = await axios.delete(`/api/tasks/${id}`);
-      toast.success("Task deleted");
+      toast.success("タスクを削除しました");
 
       allTasks();
     } catch (error) {
@@ -103,9 +101,7 @@ export const GlobalProvider = ({ children }) => {
         collapseMenu,
       }}
     >
-      <GlobalUpdateContext.Provider value={{}}>
-        {children}
-      </GlobalUpdateContext.Provider>
+      <GlobalUpdateContext.Provider value={{}}>{children}</GlobalUpdateContext.Provider>
     </GlobalContext.Provider>
   );
 };

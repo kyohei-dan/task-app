@@ -33,7 +33,7 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
               updateTask(task);
             }}
           >
-            Completed
+            完了タスク
           </button>
         ) : (
           <button
@@ -47,10 +47,10 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
               updateTask(task);
             }}
           >
-            Incomplete
+            まだなタスク
           </button>
         )}
-        <button className="edit">{edit}</button>
+        <button className="edit"></button>
         <button
           className="delete"
           onClick={() => {

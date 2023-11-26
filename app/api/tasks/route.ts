@@ -14,14 +14,14 @@ export async function POST(req: Request) {
 
     if (!title || !description || !date) {
       return NextResponse.json({
-        error: "Missing required fields",
+        error: "必須のフィールドを入力してください",
         status: 400,
       });
     }
 
     if (title.length < 3) {
       return NextResponse.json({
-        error: "Title must be at least 3 characters long",
+        error: "タイトルは3文字以上のほうがいいよ",
         status: 400,
       });
     }
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
     return NextResponse.json(task);
   } catch (error) {
     console.log("ERROR CREATING TASK: ", error);
-    return NextResponse.json({ error: "Error creating task", status: 500 });
+    return NextResponse.json({ error: "エラーでタスクが追加できませんでした🐤", status: 500 });
   }
 }
 
