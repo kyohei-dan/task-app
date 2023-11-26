@@ -2,7 +2,7 @@
 
 ## 1. プロジェクト概要
 
-このアプリは Next.js、Prisma を使用したタスク管理アプリです。
+このアプリは Next.js、Prisma Supabase を使用したタスク管理アプリです。
 
 ---
 
@@ -14,10 +14,11 @@
 | -------------- | -------------------------------- |
 | HTML           | JSX                              |
 | CSS            | styled-components + Tailwind CSS |
-| JS             | React（Next.js）                 |
+| JS             | React（Next.js: App Router）     |
 | 型             | TypeScript                       |
 | サーバー       | Vercel                           |
 | DB             | Supabase                         |
+| 認証           | Clerk                            |
 
 ---
 
