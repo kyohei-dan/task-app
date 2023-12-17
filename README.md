@@ -2,7 +2,11 @@
 
 ## 1. プロジェクト概要
 
-このアプリは Next.js、Prisma Supabase を使用したタスク管理アプリです。
+このアプリは Next.js、Prisma, Supabase を使用したタスク管理アプリです。
+
+### URL
+
+<a href="https://task-app-mocha-beta.vercel.app" target="_blank"><strong>https://task-app-mocha-beta.vercel.app</strong></a>
 
 ---
 
